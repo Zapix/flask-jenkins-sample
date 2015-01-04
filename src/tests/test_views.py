@@ -15,4 +15,4 @@ class IndexTestCase(TestCase):
 
     def test_index(self):
         rv = self.client.get('/')
-        self.assert404(rv)
+        self.assert200(rv)
