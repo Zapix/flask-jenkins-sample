@@ -13,5 +13,6 @@ class IndexTestCase(TestCase):
     def test_sum(self):
         self.assertEquals(2+2, 4)
 
-    def test_error_sum(self):
-        self.assertEquals(2+4, 6)
+    def test_index(self):
+        rv = self.client.get('/')
+        self.assert404(rv)
